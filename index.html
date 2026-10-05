@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karandeep Singh</title>
+  <meta name="description" content="Karandeep Singh — Software engineer and Computer Science graduate from NIT Jalandhar, building software, AI systems and developer tools.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main site/styles.css">
+</head>
+
+<body class="loading">
+
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <canvas id="sky-canvas"></canvas>
+  <div id="sky-fallback"></div>
+  <div class="vignette"></div>
+
+  <!-- ============ the gitloading screen IS the launch ============
+       This overlay is transparent: the countdown sits on top while the
+       rocket, pad and plume are rendered on the canvas behind it. -->
+  <div class="preloader" id="preloader">
+    <div class="pre-inner">
+      <p class="pre-mark">Karandeep Singh</p>
+      <div class="pre-rule"><span id="pre-bar-fill"></span></div>
+      <div class="pre-foot">
+        <span class="pre-status" id="pre-status">Systems check</span>
+        <span class="pre-count" id="pre-count">00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- targeting reticle: four corner brackets that snap onto whatever you
+       point at, plus a dot that tracks the pointer exactly -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="reticle" id="reticle"><i></i><i></i><i></i><i></i></div>
+
+  <div class="scroll-rail"><i></i></div>
+
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a class="logo" href="#top">Karan</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ hero ============ -->
+    <section class="hero-pin" id="hero-pin">
+      <div class="hero-stage">
+        <div class="hero-inner">
+          <div class="hero-tag"><i></i>Software Engineer • Backend • AI</div>
+
+          <div class="hero-name-wrap" id="hero-name-wrap">
+            <h1 class="hero-name" id="hero-name" data-text="Karandeep Singh"></h1>
+
+            <div class="name-sat" id="name-sat" aria-hidden="true">
+              <svg viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- solar panels -->
+                <rect x="2"  y="22" width="30" height="16" rx="1.5" fill="#1e3f8f" stroke="#8fcaff" stroke-width="1.2"/>
+                <line x1="12" y1="22" x2="12" y2="38" stroke="#8fcaff" stroke-width="0.8"/>
+                <line x1="22" y1="22" x2="22" y2="38" stroke="#8fcaff" stroke-width="0.8"/>
+                <rect x="68" y="22" width="30" height="16" rx="1.5" fill="#1e3f8f" stroke="#8fcaff" stroke-width="1.2"/>
+                <line x1="78" y1="22" x2="78" y2="38" stroke="#8fcaff" stroke-width="0.8"/>
+                <line x1="88" y1="22" x2="88" y2="38" stroke="#8fcaff" stroke-width="0.8"/>
+                <!-- booms -->
+                <line x1="32" y1="30" x2="40" y2="30" stroke="#cddffa" stroke-width="1.6"/>
+                <line x1="60" y1="30" x2="68" y2="30" stroke="#cddffa" stroke-width="1.6"/>
+                <!-- bus -->
+                <rect x="40" y="20" width="20" height="20" rx="2.5" fill="#dbe6f7" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="44" y="24" width="12" height="6" rx="1" fill="#3b86ff"/>
+                <!-- dish -->
+                <ellipse cx="50" cy="14" rx="8" ry="4" fill="#eef4ff" stroke="#ffffff" stroke-width="1"/>
+                <line x1="50" y1="18" x2="50" y2="21" stroke="#ffffff" stroke-width="1.4"/>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+        <div class="scroll-cue"><span>Scroll</span><i></i></div>
+      </div>
+    </section>
+
+    <!-- ============ about ============ -->
+    <section class="section" id="about">
+      <div class="about-grid">
+        <div class="reveal">
+          <div class="porthole-wrap" id="porthole-wrap">
+            <svg class="porthole-arc" viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="50" r="48"></circle>
+            </svg>
+            <div class="porthole" id="porthole">
+              <div class="porthole-glass">
+                <img src="main site/img/LinkedInProfile.jpeg" alt="Picture of me" class="me_pic">
+              </div>
+              <span class="porthole-sweep" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-body">
+          <h2 class="section-title reveal" data-delay="1">About Me</h2>
+
+          <div class="record reveal" data-delay="2">
+            <div class="record-row">
+              <span class="record-key">Name</span><span class="record-sep">:</span>
+              <span class="record-val">Karandeep Singh</span>
+            </div>
+            <div class="record-row">
+              <span class="record-key">Institution</span><span class="record-sep">:</span>
+              <span class="record-val">NIT Jalandhar</span>
+            </div>
+            <div class="record-row">
+              <span class="record-key">Degree</span><span class="record-sep">:</span>
+              <span class="record-val">B.Tech, Computer Science &amp; Engineering</span>
+            </div>
+            <div class="record-row">
+              <span class="record-key">CGPA</span><span class="record-sep">:</span>
+              <span class="record-val">8.22</span>
+            </div>
+            <div class="record-row">
+              <span class="record-key">Focus</span><span class="record-sep">:</span>
+              <span class="record-val">Software Engineering &amp; AI</span>
+            </div>
+            <div class="record-row">
+              <span class="record-key">Based</span><span class="record-sep">:</span>
+              <span class="record-val">Bangalore, India</span>
+            </div>
+          </div>
+
+          <!-- From Uiverse.io by Valeron-T -->
+          <div class="social-card reveal" data-delay="3">
+            <a href="mailto:karanbararwal@gmail.com" aria-label="Email">
+              <svg class="stroked" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m3 7 9 6 9-6"></path>
+              </svg>
+            </a>
+            <a href="https://github.com/KaranBararwal" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/karan-bardwal" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ projects: a system of planets ============ -->
+<section class="section" id="projects">
+  <h2 class="section-title reveal" data-delay="1">Projects</h2>
+
+  <div class="system">
+
+    <!-- OLLABOT -->
+<!-- PROXY ATTENDANCE -->
+<a class="planet-card reveal"
+   href="https://github.com/KaranBararwal/Proxy"
+   target="_blank"
+   rel="noopener"
+   style="--glow:rgba(120,170,255,.5); --size:180px; --fallback:#263b68; --ring:#8fcaff">
+
+  <div class="planet-slot" data-world="p-cup"></div>
+
+  <p class="planet-name">Proxy Attendance</p>
+
+  <div class="planet-info">
+    <span class="planet-drop"></span>
+    <span class="planet-rule"></span>
+
+    <div class="planet-readout">
+      <p class="planet-desc">
+        MERN stack attendance management system designed to streamline
+        attendance tracking and simplify classroom workflows.
+      </p>
+
+      <span class="planet-cta">Explore</span>
+    </div>
+  </div>
+</a>
+
+
+    <!-- PLACEMENT PORTAL -->
+    <a class="planet-card reveal"
+       data-delay="1"
+       href="#"
+       target="_blank"
+       rel="noopener"
+       style="--glow:rgba(100,220,180,.45); --size:155px; --fallback:#24584d; --ring:#72e0bd">
+
+      <div class="planet-slot" data-world="p-wordle"></div>
+
+      <p class="planet-name">Placement Portal</p>
+
+      <div class="planet-info">
+        <span class="planet-drop"></span>
+        <span class="planet-rule"></span>
+
+        <div class="planet-readout">
+          <p class="planet-desc">
+            MERN-based placement platform with dynamic forms,
+            automated applications, role-based access and live exports.
+          </p>
+
+          <span class="planet-cta">View project</span>
+        </div>
+      </div>
+    </a>
+
+
+    <!-- TRIP EXPENSES -->
+    <a class="planet-card reveal"
+       data-delay="2"
+       href="https://github.com/KaranBararwal/ExpenseTracker"
+       target="_blank"
+       rel="noopener"
+       style="--glow:rgba(255,180,100,.45); --size:145px; --fallback:#68452d; --ring:#ffc078">
+
+      <div class="planet-slot" data-world="p-drum"></div>
+
+      <p class="planet-name">Trip Expenses</p>
+
+      <div class="planet-info">
+        <span class="planet-drop"></span>
+        <span class="planet-rule"></span>
+
+        <div class="planet-readout">
+          <p class="planet-desc">
+            Full-stack expense management application for
+            splitting bills, tracking payments and managing trips.
+          </p>
+
+          <span class="planet-cta">Explore</span>
+        </div>
+      </div>
+    </a>
+
+
+    <!-- FINANCE BACKEND -->
+    <a class="planet-card reveal"
+       data-delay="1"
+       href="https://github.com/KaranBararwal/backend-finance"
+       target="_blank"
+       rel="noopener"
+       style="--glow:rgba(170,130,255,.5); --size:135px; --fallback:#49376b; --ring:#b89cff">
+
+      <div class="planet-slot" data-world="p-weather"></div>
+
+      <p class="planet-name">Finance Backend</p>
+
+      <div class="planet-info">
+        <span class="planet-drop"></span>
+        <span class="planet-rule"></span>
+
+        <div class="planet-readout">
+          <p class="planet-desc">
+            REST API backend built with Node.js, Express and MongoDB,
+            with authentication and role-based middleware.
+          </p>
+
+          <span class="planet-cta">View project</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+    <!-- ============ experience: swipeable constellations ============ -->
+    <section class="section" id="experience">
+      <h2 class="section-title reveal" data-delay="1">Experience</h2>
+
+      <div class="reveal" data-delay="2">
+        <div class="const-stage" id="const-stage" tabindex="0" role="group"
+             aria-label="Constellation of roles. Use left and right arrow keys to change formation.">
+          <!-- Constellation figures from Sidney Hall's "Urania's Mirror"
+               (London, 1825). Public domain; the engravings were reduced to
+               white line art and are used here as CSS masks. -->
+          <div class="const-figure" id="const-fig" aria-hidden="true"></div>
+          <svg class="const-svg" id="const-svg" aria-hidden="true">
+            <g id="const-ties"></g>
+            <g id="const-lines"></g>
+            <g id="const-minor"></g>
+          </svg>
+          <!-- job stars are built by JS -->
+        </div>
+
+        <div class="const-head">
+          <button class="const-arrow" id="const-prev" aria-label="Previous constellation">&#8592;</button>
+          <div class="const-title">
+            <p class="const-name" id="const-name">Orion</p>
+            <p class="const-sub" id="const-sub">1 of 5</p>
+          </div>
+          <button class="const-arrow" id="const-next" aria-label="Next constellation">&#8594;</button>
+        </div>
+        <div class="const-dots" id="const-dots"></div>
+      </div>
+    </section>
+
+    <!-- ============ skills ============ -->
+<section class="section" id="skills">
+  <h2 class="section-title reveal" data-delay="1">Skills</h2>
+
+  <div class="skills-filters" id="skills-filters">
+    <button class="skills-filter active" data-filter="all">All</button>
+
+    <button class="skills-filter" data-filter="languages">
+      <span class="filter-dot" data-cat="languages"></span>
+      Languages
+    </button>
+
+    <button class="skills-filter" data-filter="frontend">
+      <span class="filter-dot" data-cat="frontend"></span>
+      Frontend
+    </button>
+
+    <button class="skills-filter" data-filter="backend">
+      <span class="filter-dot" data-cat="backend"></span>
+      Backend
+    </button>
+
+    <button class="skills-filter" data-filter="database">
+      <span class="filter-dot" data-cat="database"></span>
+      Database
+    </button>
+
+    <button class="skills-filter" data-filter="ai">
+      <span class="filter-dot" data-cat="ai"></span>
+      AI / ML
+    </button>
+
+    <button class="skills-filter" data-filter="tools">
+      <span class="filter-dot" data-cat="tools"></span>
+      Tools
+    </button>
+  </div>
+
+  <div class="cloud-stage" id="cloud-stage">
+    <div class="cloud-sphere" id="cloud-sphere">
+
+      <!-- Languages -->
+      <span class="cloud-tag" data-cat="languages" data-weight="3">C++</span>
+      <span class="cloud-tag" data-cat="languages" data-weight="3">Python</span>
+      <span class="cloud-tag" data-cat="languages" data-weight="3">JavaScript</span>
+      <span class="cloud-tag" data-cat="languages" data-weight="2">Kotlin</span>
+
+      <!-- Frontend -->
+      <span class="cloud-tag" data-cat="frontend" data-weight="3">React.js</span>
+      <span class="cloud-tag" data-cat="frontend" data-weight="3">Next.js</span>
+      <span class="cloud-tag" data-cat="frontend" data-weight="2">Tailwind CSS</span>
+      <span class="cloud-tag" data-cat="frontend" data-weight="2">HTML/CSS</span>
+
+      <!-- Backend -->
+      <span class="cloud-tag" data-cat="backend" data-weight="3">Node.js</span>
+      <span class="cloud-tag" data-cat="backend" data-weight="3">Express.js</span>
+      <span class="cloud-tag" data-cat="backend" data-weight="2">REST APIs</span>
+      <span class="cloud-tag" data-cat="backend" data-weight="2">MERN Stack</span>
+
+      <!-- Database -->
+      <span class="cloud-tag" data-cat="database" data-weight="3">MongoDB</span>
+      <span class="cloud-tag" data-cat="database" data-weight="2">MongoDB Queries</span>
+
+      <!-- AI / ML -->
+      <span class="cloud-tag" data-cat="ai" data-weight="3">RAG</span>
+      <span class="cloud-tag" data-cat="ai" data-weight="3">LLM Integration</span>
+      <span class="cloud-tag" data-cat="ai" data-weight="2">OpenAI API</span>
+      <span class="cloud-tag" data-cat="ai" data-weight="2">ChromaDB</span>
+
+      <!-- Tools -->
+      <span class="cloud-tag" data-cat="tools" data-weight="3">Git</span>
+      <span class="cloud-tag" data-cat="tools" data-weight="3">GitHub</span>
+      <span class="cloud-tag" data-cat="tools" data-weight="2">Postman</span>
+      <span class="cloud-tag" data-cat="tools" data-weight="2">CI/CD</span>
+      <span class="cloud-tag" data-cat="tools" data-weight="2">Google OAuth</span>
+
+    </div>
+  </div>
+
+  <p class="cloud-hint">Drag to spin</p>
+</section>
+
+
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-meta">&copy; 2026 Karandeep Singh</p>
+  </footer>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+
+
+<script src="js/experience.js"></script>
+<script src="js/skills.js"></script>
+<script src="js/main.js"></script>
+
+
+  <script type="module">
+  /* ---------------------------------------------------------
+     The scene: a night launch, then Earth orbit, then deep space.
+     --------------------------------------------------------- */
+  import * as THREE from 'three';
+  import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+  import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+  import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+  import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+  import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+
+  const canvas = document.getElementById('sky-canvas');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  let renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: false, powerPreference: 'high-performance' });
+  } catch (err) {
+    document.body.classList.add('no-webgl');
+    window.dispatchEvent(new Event('sky-ready'));
+    throw err;
+  }
+
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.autoClear = false;
+
+  const mobile = window.innerWidth < 760;
+
+  /* --- background gradient + ground silhouette --- */
+  const bgScene = new THREE.Scene();
+  const bgCamera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+  const skyUniforms = {
+    uTop: { value: new THREE.Color('#04060e') },
+    uBot: { value: new THREE.Color('#101c3d') },
+    uGround: { value: 1.0 }
+  };
+
+  bgScene.add(new THREE.Mesh(
+    new THREE.PlaneGeometry(2, 2),
+    new THREE.ShaderMaterial({
+      uniforms: skyUniforms,
+      depthTest: false, depthWrite: false,
+      vertexShader: `
+        varying vec2 vUv;
+        void main() { vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }
+      `,
+      fragmentShader: `
+        uniform vec3 uTop; uniform vec3 uBot; uniform float uGround;
+        varying vec2 vUv;
+        float ridge(float x) {
+          return 0.050 + 0.028 * sin(x * 6.0 + 0.5)
+               + 0.016 * sin(x * 13.0 + 2.0) + 0.009 * sin(x * 27.0 + 4.0);
+        }
+        void main() {
+          vec3 col = mix(uBot, uTop, pow(vUv.y, 0.8));
+          float d = distance(vUv, vec2(0.5, -0.02));
+          col += uGround * vec3(0.32, 0.46, 0.85) * smoothstep(0.7, 0.0, d) * 0.30;
+          float h = ridge(vUv.x) * uGround;
+          float g = smoothstep(h, h - 0.004, vUv.y);
+          col = mix(col, vec3(0.008, 0.012, 0.026), g * uGround);
+          float n = fract(sin(dot(vUv * 900.0, vec2(12.9898, 78.233))) * 43758.5453);
+          gl_FragColor = vec4(col + (n - 0.5) * 0.006, 1.0);
+        }
+      `
+    })
+  ));
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(62, window.innerWidth / window.innerHeight, 1, 6000);
+
+  scene.add(new THREE.AmbientLight(0x8fb4ff, 0.75));
+  const keyLight = new THREE.DirectionalLight(0xffffff, 3.0);
+  keyLight.position.set(-1, 0.9, 0.8);
+  scene.add(keyLight);
+  const rimLight = new THREE.DirectionalLight(0x8fcaff, 1.1);
+  rimLight.position.set(1, -0.3, -0.6);
+  scene.add(rimLight);
+
+  function discTexture() {
+    const c = document.createElement('canvas');
+    c.width = c.height = 64;
+    const ctx = c.getContext('2d');
+    const g = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+    g.addColorStop(0.0, 'rgba(255,255,255,1)');
+    g.addColorStop(0.25, 'rgba(255,255,255,0.85)');
+    g.addColorStop(1.0, 'rgba(255,255,255,0)');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, 64, 64);
+    return new THREE.CanvasTexture(c);
+  }
+  const disc = discTexture();
+
+  /* ---------------------------------------------------------
+     Procedural Earth. Value-noise fbm decides land vs ocean, a second
+     octave set picks the biome colour, and latitude adds ice caps.
+     --------------------------------------------------------- */
+  function makeNoise(seed) {
+    const perm = new Uint8Array(512);
+    let s = seed;
+    const rnd = () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296;
+    const p = new Uint8Array(256);
+    for (let i = 0; i < 256; i++) p[i] = i;
+    for (let i = 255; i > 0; i--) { const j = (rnd() * (i + 1)) | 0; [p[i], p[j]] = [p[j], p[i]]; }
+    for (let i = 0; i < 512; i++) perm[i] = p[i & 255];
+
+    const fade = t => t * t * (3 - 2 * t);
+    // value noise on a wrapping grid, so the texture tiles horizontally
+    return function noise(x, y, wrap) {
+      const xi = Math.floor(x), yi = Math.floor(y);
+      const xf = x - xi, yf = y - yi;
+      const u = fade(xf), v = fade(yf);
+      const at = (a, b) => {
+        const ax = ((a % wrap) + wrap) % wrap;
+        return perm[(perm[(ax + perm[b & 255]) & 255] + b) & 255] / 255;
+      };
+      const n00 = at(xi, yi),     n10 = at(xi + 1, yi);
+      const n01 = at(xi, yi + 1), n11 = at(xi + 1, yi + 1);
+      return (n00 * (1 - u) + n10 * u) * (1 - v) + (n01 * (1 - u) + n11 * u) * v;
+    };
+  }
+
+  function earthTextures() {
+    const W = 1024, H = 512;
+    const land = document.createElement('canvas'); land.width = W; land.height = H;
+    const cloud = document.createElement('canvas'); cloud.width = W; cloud.height = H;
+    const lctx = land.getContext('2d'), cctx = cloud.getContext('2d');
+    const limg = lctx.createImageData(W, H), cimg = cctx.createImageData(W, H);
+
+    const nA = makeNoise(1337), nB = makeNoise(9021), nC = makeNoise(4477);
+
+    const fbm = (fn, x, y, wrap, oct) => {
+      let v = 0, amp = 0.5, f = 1;
+      for (let i = 0; i < oct; i++) {
+        v += fn(x * f, y * f, wrap * f) * amp;
+        amp *= 0.5; f *= 2;
+      }
+      return v;
+    };
+
+    const BASE = 8;   // grid cells across at octave 0
+
+    for (let y = 0; y < H; y++) {
+      const lat = y / H;                       // 0 = north pole
+      // squash toward the poles so continents don't smear
+      const yy = (lat - 0.5) * 2;
+      for (let x = 0; x < W; x++) {
+        const u = x / W;
+        const gx = u * BASE, gy = lat * BASE * 0.5;
+        let h = fbm(nA, gx, gy, BASE, 5);
+        // pull height down near the equator edges so oceans dominate
+        h = h * 1.25 - 0.30 - Math.abs(yy) * 0.10;
+
+        const i = (y * W + x) * 4;
+        let r, g, b;
+
+        // ocean colour, always computed so we can blend the shoreline into it
+        const deep = Math.min(1, Math.max(0, (0.30 - h) * 3.2));
+        const or_ = 12 + (1 - deep) * 26;
+        const og = 54 + (1 - deep) * 60;
+        const ob = 104 + (1 - deep) * 62;
+
+        if (h > 0.27) {
+          const dry = fbm(nB, gx * 2.2, gy * 2.2, BASE * 2, 3);
+          if (h > 0.50) { r = 128; g = 122; b = 104; }           // highland
+          else if (dry > 0.55) { r = 176; g = 152; b = 96; }     // arid
+          else { r = 58; g = 104; b = 52; }                      // vegetation
+          const shade = 0.82 + fbm(nC, gx * 5, gy * 5, BASE * 5, 2) * 0.36;
+          r *= shade; g *= shade; b *= shade;
+          // feather the coast over a band of height rather than cutting it
+          // hard, which was giving the continents jagged, spiky edges
+          const coast = Math.min(1, (h - 0.27) / 0.05);
+          const e = coast * coast * (3 - 2 * coast);
+          r = or_ * (1 - e) + r * e;
+          g = og  * (1 - e) + g * e;
+          b = ob  * (1 - e) + b * e;
+        } else {
+          r = or_; g = og; b = ob;
+        }
+
+        // ice caps
+        const ice = Math.max(0, (Math.abs(yy) - 0.80) / 0.20);
+        if (ice > 0) {
+          const t = Math.min(1, ice * 1.4);
+          r = r * (1 - t) + 236 * t;
+          g = g * (1 - t) + 242 * t;
+          b = b * (1 - t) + 250 * t;
+        }
+
+        limg.data[i] = r; limg.data[i + 1] = g; limg.data[i + 2] = b; limg.data[i + 3] = 255;
+
+        // clouds: separate fbm, thinned at the poles
+        let c = fbm(nB, gx * 1.7 + 40, gy * 1.7, BASE * 1.7, 4);
+        c = Math.max(0, c * 1.7 - 0.62) * (1 - Math.abs(yy) * 0.45);
+        cimg.data[i] = 255; cimg.data[i + 1] = 255; cimg.data[i + 2] = 255;
+        cimg.data[i + 3] = Math.min(255, c * 420);
+      }
+    }
+
+    lctx.putImageData(limg, 0, 0);
+    cctx.putImageData(cimg, 0, 0);
+
+    const lt = new THREE.CanvasTexture(land);
+    const ct = new THREE.CanvasTexture(cloud);
+    lt.colorSpace = THREE.SRGBColorSpace;
+    lt.wrapS = ct.wrapS = THREE.RepeatWrapping;
+    return { landTex: lt, cloudTex: ct };
+  }
+
+  const { landTex, cloudTex } = earthTextures();
+
+  /* --- starfield --- */
+  const STAR_COUNT = mobile ? 2600 : 7000;
+  const FIELD_DEPTH = 3000;
+  const starPos = new Float32Array(STAR_COUNT * 3);
+  const starCol = new Float32Array(STAR_COUNT * 3);
+  const tint = new THREE.Color();
+
+  for (let i = 0; i < STAR_COUNT; i++) {
+    const r = 140 + Math.random() * 1100;
+    const a = Math.random() * Math.PI * 2;
+    starPos[i * 3]     = Math.cos(a) * r;
+    starPos[i * 3 + 1] = Math.sin(a) * r * 0.8;
+    starPos[i * 3 + 2] = -Math.random() * FIELD_DEPTH;
+    const roll = Math.random();
+    if (roll > 0.86)      tint.set('#8fcaff');
+    else if (roll > 0.78) tint.set('#ffd9b8');
+    else                  tint.set('#ffffff');
+    tint.toArray(starCol, i * 3);
+  }
+
+  const starGeo = new THREE.BufferGeometry();
+  starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+  starGeo.setAttribute('color', new THREE.BufferAttribute(starCol, 3));
+  const starMat = new THREE.PointsMaterial({
+    size: 5, map: disc, vertexColors: true, transparent: true, opacity: 0.35,
+    depthWrite: false, blending: THREE.AdditiveBlending, sizeAttenuation: true
+  });
+  scene.add(new THREE.Points(starGeo, starMat));
+
+  /* --- drifting dust, close to camera, for a sense of speed --- */
+  const DUST = mobile ? 260 : 600;
+  const dustPos = new Float32Array(DUST * 3);
+  for (let i = 0; i < DUST; i++) {
+    dustPos[i * 3]     = (Math.random() - 0.5) * 900;
+    dustPos[i * 3 + 1] = (Math.random() - 0.5) * 700;
+    dustPos[i * 3 + 2] = -Math.random() * 900;
+  }
+  const dustGeo = new THREE.BufferGeometry();
+  dustGeo.setAttribute('position', new THREE.BufferAttribute(dustPos, 3));
+  const dustMat = new THREE.PointsMaterial({
+    size: 2.4, map: disc, color: 0xbcd8ff, transparent: true, opacity: 0,
+    depthWrite: false, blending: THREE.AdditiveBlending
+  });
+  const dust = new THREE.Points(dustGeo, dustMat);
+  scene.add(dust);
+
+  /* --- nebulae --- */
+  const nebulaGroup = new THREE.Group();
+  const nebulaMats = [];
+  ['#3b86ff', '#7c5cff', '#2f6fe0', '#ff9ec7', '#5aa6ff'].forEach((hex, i) => {
+    const mat = new THREE.SpriteMaterial({
+      map: disc, color: new THREE.Color(hex), transparent: true, opacity: 0,
+      depthWrite: false, blending: THREE.AdditiveBlending
+    });
+    const sprite = new THREE.Sprite(mat);
+    const s = 600 + Math.random() * 800;
+    sprite.scale.set(s, s, 1);
+    sprite.position.set((Math.random() - 0.5) * 1300, (Math.random() - 0.5) * 800, -600 - i * 400);
+    sprite.userData.drift = 0.15 + Math.random() * 0.35;
+    nebulaMats.push(mat);
+    nebulaGroup.add(sprite);
+  });
+  scene.add(nebulaGroup);
+
+  /* --- Earth --- */
+  const home = new THREE.Group();
+  const homeSurface = new THREE.Mesh(
+    // high segment count: at this radius the limb fills the screen, and a
+      // coarser sphere showed visible facets along the horizon
+      new THREE.SphereGeometry(900, 192, 128),
+    new THREE.MeshStandardMaterial({
+      map: landTex, roughness: 0.92, metalness: 0.02,
+      transparent: true, opacity: 0
+    })
+  );
+  home.add(homeSurface);
+
+  const homeClouds = new THREE.Mesh(
+    new THREE.SphereGeometry(912, 128, 96),
+    new THREE.MeshStandardMaterial({
+      map: cloudTex, transparent: true, opacity: 0,
+      roughness: 1, metalness: 0, depthWrite: false
+    })
+  );
+  home.add(homeClouds);
+
+  home.position.set(0, -1150, -700);
+  home.rotation.z = 0.41;          // axial tilt
+  scene.add(home);
+
+  const moon = new THREE.Mesh(
+    new THREE.SphereGeometry(58, 32, 24),
+    new THREE.MeshStandardMaterial({ color: 0x9aa6bd, roughness: 1, metalness: 0, transparent: true, opacity: 0 })
+  );
+  scene.add(moon);
+
+  /* --- satellites --- */
+  const satellites = [];
+  function makeSatellite(scale) {
+    const g = new THREE.Group();
+    const bodyMat = new THREE.MeshStandardMaterial({ color: 0xd7e2f5, roughness: 0.4, metalness: 0.6, transparent: true, opacity: 0 });
+    const panelMat = new THREE.MeshStandardMaterial({ color: 0x1e3f8f, roughness: 0.3, metalness: 0.5, transparent: true, opacity: 0 });
+    g.add(new THREE.Mesh(new THREE.BoxGeometry(14, 14, 20), bodyMat));
+    [-1, 1].forEach(s => {
+      const panel = new THREE.Mesh(new THREE.BoxGeometry(30, 0.8, 13), panelMat);
+      panel.position.x = s * 23;
+      g.add(panel);
+    });
+    const dish = new THREE.Mesh(new THREE.SphereGeometry(6, 20, 12, 0, Math.PI * 2, 0, Math.PI / 2), bodyMat);
+    dish.position.y = 9; dish.rotation.x = -0.5;
+    g.add(dish);
+    g.scale.setScalar(scale);
+    scene.add(g);
+    satellites.push(g);
+  }
+  makeSatellite(0.5); makeSatellite(0.34); makeSatellite(0.62);
+
+  /* ---------------------------------------------------------
+     The launch vehicle. A lathed ogive hull with a painted skin,
+     an interstage, grid fins, landing legs and a nozzle cluster —
+     rather than a cone stuck on a tube.
+     --------------------------------------------------------- */
+  function hullTexture() {
+    const c = document.createElement('canvas');
+    c.width = 256; c.height = 1024;
+    const ctx = c.getContext('2d');
+
+    // base coat with cross-barrel shading so the cylinder never looks flat
+    const g = ctx.createLinearGradient(0, 0, 256, 0);
+    g.addColorStop(0.00, '#8f9aab');
+    g.addColorStop(0.28, '#f4f7fb');
+    g.addColorStop(0.55, '#ffffff');
+    g.addColorStop(0.82, '#c9d2df');
+    g.addColorStop(1.00, '#79828f');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, 256, 1024);
+
+    // v runs bottom(0) -> top(1); canvas y is inverted
+    const band = (v0, v1, fill) => {
+      ctx.fillStyle = fill;
+      ctx.fillRect(0, (1 - v1) * 1024, 256, (v1 - v0) * 1024);
+    };
+
+    band(0.000, 0.055, '#1c222c');   // scorched engine skirt
+    band(0.055, 0.062, '#6f7886');   // separation ring
+    band(0.435, 0.492, '#1c222c');   // interstage
+    band(0.492, 0.498, '#6f7886');
+    band(0.905, 0.912, '#2f6fe0');   // slim accent stripe below the fairing
+
+    // fine panel seams — low contrast, just enough to read as hardware
+    ctx.strokeStyle = 'rgba(110,124,145,0.30)';
+    ctx.lineWidth = 1;
+    for (let x = 16; x < 256; x += 32) {
+      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, 1024); ctx.stroke();
+    }
+    ctx.strokeStyle = 'rgba(110,124,145,0.16)';
+    for (let y = 0; y < 1024; y += 58) {
+      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(256, y); ctx.stroke();
+    }
+
+    const t = new THREE.CanvasTexture(c);
+    t.colorSpace = THREE.SRGBColorSpace;
+    t.wrapS = THREE.RepeatWrapping;
+    t.anisotropy = renderer.capabilities.getMaxAnisotropy();
+    return t;
+  }
+
+  const rocket = new THREE.Group();
+
+  /* Hull: one lathed profile from the boat-tail up through an ogive nose,
+     so the silhouette is a single continuous curve rather than a cone
+     balanced on a tube. */
+  const R = 6.0;
+  const profile = [
+    new THREE.Vector2(0.01, -48),
+    new THREE.Vector2(R * 0.80, -47.4),
+    new THREE.Vector2(R * 0.96, -45),
+    new THREE.Vector2(R, -42),
+    new THREE.Vector2(R, 24)
+  ];
+  // ogive nose — the radius falls away on a curve, not a straight taper
+  for (let i = 1; i <= 16; i++) {
+    const t = i / 16;
+    profile.push(new THREE.Vector2(R * Math.pow(Math.cos(t * Math.PI * 0.5), 0.55), 24 + t * 32));
+  }
+  profile.push(new THREE.Vector2(0.01, 57));
+
+  const hull = new THREE.Mesh(
+    new THREE.LatheGeometry(profile, 96),
+    new THREE.MeshStandardMaterial({ map: hullTexture(), roughness: 0.34, metalness: 0.42 })
+  );
+  rocket.add(hull);
+
+  const darkMetal = new THREE.MeshStandardMaterial({ color: 0x1b212b, roughness: 0.42, metalness: 0.8 });
+  const finMat    = new THREE.MeshStandardMaterial({ color: 0xe8edf5, roughness: 0.38, metalness: 0.45 });
+
+  /* Four swept fins from a real tapered silhouette. The previous version
+     used box slabs, which read as rectangles bolted onto the side. */
+  const finShape = new THREE.Shape();
+  finShape.moveTo(R - 0.6, -26);
+  finShape.lineTo(R - 0.6, -46);
+  finShape.lineTo(R + 9.5, -49);
+  finShape.lineTo(R + 9.5, -40);
+  finShape.lineTo(R - 0.6, -30);
+  finShape.closePath();
+
+  const finGeo = new THREE.ExtrudeGeometry(finShape, { depth: 0.9, bevelEnabled: false });
+  finGeo.translate(0, 0, -0.45);          // centre the thickness on the radius
+
+  for (let i = 0; i < 4; i++) {
+    const fin = new THREE.Mesh(finGeo, finMat);
+    fin.rotation.y = (i / 4) * Math.PI * 2;
+    rocket.add(fin);
+  }
+
+  /* One flared engine bell, lathed, instead of a cluster of stubby cylinders. */
+  const bellProfile = [
+    new THREE.Vector2(1.5, -47.5),
+    new THREE.Vector2(1.9, -49.5),
+    new THREE.Vector2(2.7, -51.5),
+    new THREE.Vector2(3.8, -53.5),
+    new THREE.Vector2(5.1, -55.4),
+    new THREE.Vector2(5.6, -56.2)
+  ];
+  rocket.add(new THREE.Mesh(
+    new THREE.LatheGeometry(bellProfile, 48),
+    new THREE.MeshStandardMaterial({ color: 0x2a3140, roughness: 0.3, metalness: 0.95, side: THREE.DoubleSide })
+  ));
+
+  // a collar where the bell meets the boat-tail
+  const collar = new THREE.Mesh(new THREE.CylinderGeometry(2.0, 1.6, 2.2, 32), darkMetal);
+  collar.position.y = -47;
+  rocket.add(collar);
+
+  /* flame: a hot white core, an orange envelope, and a long faint plume */
+  const flameMats = [];
+  function makeFlame(radius, length, color, opacity) {
+    const mat = new THREE.MeshBasicMaterial({
+      color, transparent: true, opacity: 0,
+      blending: THREE.AdditiveBlending, side: THREE.DoubleSide, depthWrite: false
+    });
+    const m = new THREE.Mesh(new THREE.ConeGeometry(radius, length, 32, 1, true), mat);
+    m.rotation.x = Math.PI;
+    m.position.y = -57 - length / 2;
+    rocket.add(m);
+    flameMats.push({ mesh: m, mat, base: opacity, length });
+    return m;
+  }
+  makeFlame(6.2, 92, 0xff7a2a, 0.26);   // outer plume
+  makeFlame(4.0, 46, 0xffb04d, 0.70);   // envelope
+  makeFlame(2.0, 24, 0xdff0ff, 0.95);   // core
+
+  scene.add(rocket);
+
+  /* --- exhaust plume: a recycled pool of additive puffs --- */
+  const puffs = [];
+  for (let i = 0; i < 22; i++) {
+    const mat = new THREE.SpriteMaterial({
+      map: disc, color: 0xffcfa0, transparent: true, opacity: 0,
+      depthWrite: false, blending: THREE.AdditiveBlending
+    });
+    const sprite = new THREE.Sprite(mat);
+    scene.add(sprite);
+    puffs.push({ sprite, mat, life: 0, vy: 0, vx: 0, size: 20 });
+  }
+  let puffCursor = 0, puffTimer = 0;
+
+  function emitPuff(x, y, z) {
+    const p = puffs[puffCursor];
+    puffCursor = (puffCursor + 1) % puffs.length;
+    p.sprite.position.set(x + (Math.random() - 0.5) * 12, y, z + (Math.random() - 0.5) * 12);
+    p.size = 15 + Math.random() * 13;
+    p.vy = -1.8 - Math.random() * 1.5;
+    p.vx = (Math.random() - 0.5) * 1.6;
+    p.life = 1;
+  }
+
+  /* --- outer planets --- */
+  const planets = [];
+  function addPlanet({ radius, color, x, y, dist, appear, ring, ringColor, spin }) {
+    const group = new THREE.Group();
+    group.position.set(x, y, 0);   // z is set each frame, relative to the camera
+    const surface = new THREE.Mesh(
+      new THREE.SphereGeometry(radius, 48, 32),
+      new THREE.MeshStandardMaterial({ color, roughness: 0.85, metalness: 0.1, transparent: true, opacity: 0 })
+    );
+    group.add(surface);
+    const wire = new THREE.Mesh(
+      new THREE.IcosahedronGeometry(radius * 1.02, 3),
+      new THREE.MeshBasicMaterial({ color: 0xbcd8ff, wireframe: true, transparent: true, opacity: 0 })
+    );
+    group.add(wire);
+    let ringMesh = null;
+    if (ring) {
+      ringMesh = new THREE.Mesh(
+        new THREE.RingGeometry(radius * 1.45, radius * 2.1, 96),
+        new THREE.MeshBasicMaterial({ color: ringColor, side: THREE.DoubleSide, transparent: true, opacity: 0, wireframe: true })
+      );
+      ringMesh.rotation.set(1.15, 0.2, 0);
+      group.add(ringMesh);
+    }
+    scene.add(group);
+    planets.push({ group, surface, wire, ringMesh, appear, dist, spin: spin || 0.0009 });
+  }
+
+  /* `dist` is held constant ahead of the camera. The camera flies ~1800
+     units forward over the page, so a planet parked at a fixed z would be
+     approached and end up filling half the screen. */
+  /* Pushed out toward the edges and kept dim: they used to sit right behind
+     the constellation's star labels and the readout line. */
+  addPlanet({ radius: 150, color: 0x2b4a86, x: 1620, y: -300, dist: 2700, appear: 0.50,
+              ring: true, ringColor: 0xb39dff, spin: 0.0011 });
+  addPlanet({ radius: 70,  color: 0x7a4a5e, x: -1480, y:  460, dist: 2500, appear: 0.60, spin: 0.0016 });
+  addPlanet({ radius: 240, color: 0x1d3358, x: -1900, y: -620, dist: 3400, appear: 0.68, spin: 0.0006 });
+  addPlanet({ radius: 52,  color: 0x4a6f8a, x: 1560, y:  560, dist: 2200, appear: 0.76, spin: 0.0022 });
+  addPlanet({ radius: 100, color: 0x6b4a2e, x: -1320, y: -460, dist: 1900, appear: 0.84, spin: 0.0019 });
+
+  /* ---------------------------------------------------------
+     Project worlds.
+
+     Each project is a real lit sphere, drawn in its own orthographic
+     scene where one unit is one CSS pixel. Every frame we read the
+     project card's slot rect and move the sphere to match, so the
+     geometry tracks the DOM exactly — layout stays CSS's job, the
+     shading stays WebGL's.
+     --------------------------------------------------------- */
+  const projScene = new THREE.Scene();
+  let projCamera = new THREE.OrthographicCamera(
+    -window.innerWidth / 2, window.innerWidth / 2,
+    window.innerHeight / 2, -window.innerHeight / 2, -4000, 4000);
+
+  projScene.add(new THREE.AmbientLight(0x9fb6d8, 0.55));
+  const projKey = new THREE.DirectionalLight(0xfff4e8, 3.1);
+  projKey.position.set(-0.55, 0.62, 0.9);
+  projScene.add(projKey);
+  const projRim = new THREE.DirectionalLight(0x6fa8ff, 1.35);
+  projRim.position.set(0.85, -0.35, -0.5);
+  projScene.add(projRim);
+
+  /* --- procedural surfaces, drawn on a canvas that wraps in u --- */
+  function worldTexture(spec) {
+    const W = 1024, H = 512;
+    const c = document.createElement('canvas');
+    c.width = W; c.height = H;
+    const x = c.getContext('2d');
+
+    // latitude base: poles darker, equator lit
+    const g = x.createLinearGradient(0, 0, 0, H);
+    spec.base.forEach((col, i) => g.addColorStop(i / (spec.base.length - 1), col));
+    x.fillStyle = g;
+    x.fillRect(0, 0, W, H);
+
+    // anything drawn near an edge is repeated on the far side so the
+    // texture wraps seamlessly around the sphere
+    const wrapped = (fn) => { fn(0); fn(-W); fn(W); };
+
+    // soft mottling — irregular, low contrast
+    for (let i = 0; i < spec.mottle; i++) {
+      const mx = Math.random() * W, my = Math.random() * H;
+      const rx = 40 + Math.random() * 190, ry = 16 + Math.random() * 70;
+      const tint = spec.mottleColors[(Math.random() * spec.mottleColors.length) | 0];
+      wrapped(off => {
+        const rg = x.createRadialGradient(mx + off, my, 0, mx + off, my, rx);
+        rg.addColorStop(0, tint);
+        rg.addColorStop(1, 'rgba(0,0,0,0)');
+        x.save();
+        x.globalAlpha = 0.10 + Math.random() * 0.22;
+        x.translate(mx + off, my);
+        x.scale(1, ry / rx);
+        x.translate(-(mx + off), -my);
+        x.fillStyle = rg;
+        x.fillRect(mx + off - rx, my - rx, rx * 2, rx * 2);
+        x.restore();
+      });
+    }
+
+    // latitude belts for the gas giants
+    if (spec.bands) {
+      for (let i = 0; i < spec.bands.count; i++) {
+        const y = Math.random() * H;
+        const th = 6 + Math.random() * 26;
+        x.globalAlpha = 0.06 + Math.random() * 0.16;
+        x.fillStyle = spec.bands.colors[(Math.random() * spec.bands.colors.length) | 0];
+        x.beginPath();
+        x.ellipse(W / 2, y, W, th, 0, 0, Math.PI * 2);
+        x.fill();
+      }
+      x.globalAlpha = 1;
+    }
+
+    // impact craters: dark bowl, lit rim on the sun side
+    for (let i = 0; i < spec.craters; i++) {
+      const cx = Math.random() * W;
+      // keep them off the poles, where the mapping pinches
+      const cy = H * (0.18 + Math.random() * 0.64);
+      const r = 6 + Math.random() * 26;
+      wrapped(off => {
+        x.save();
+        x.globalAlpha = 0.55;
+        x.fillStyle = 'rgba(0,0,0,0.85)';
+        x.beginPath(); x.ellipse(cx + off, cy, r, r * 0.72, 0, 0, Math.PI * 2); x.fill();
+        x.globalAlpha = 0.5;
+        x.strokeStyle = spec.rim;
+        x.lineWidth = Math.max(1, r * 0.16);
+        x.beginPath(); x.ellipse(cx + off, cy - r * 0.08, r, r * 0.72, 0, Math.PI * 1.05, Math.PI * 2.0); x.stroke();
+        x.restore();
+      });
+    }
+
+    // a named storm, if this world has one
+    if (spec.storm) {
+      const sx = W * spec.storm.x, sy = H * spec.storm.y;
+      wrapped(off => {
+        const rg = x.createRadialGradient(sx + off, sy, 0, sx + off, sy, spec.storm.r);
+        rg.addColorStop(0, spec.storm.hot);
+        rg.addColorStop(0.55, spec.storm.cool);
+        rg.addColorStop(1, 'rgba(0,0,0,0)');
+        x.save();
+        x.translate(sx + off, sy); x.scale(1, 0.45); x.translate(-(sx + off), -sy);
+        x.fillStyle = rg;
+        x.fillRect(sx + off - spec.storm.r, sy - spec.storm.r, spec.storm.r * 2, spec.storm.r * 2);
+        x.restore();
+      });
+    }
+
+    // polar caps
+    if (spec.caps) {
+      [[0, 1], [H, -1]].forEach(([edge, dir]) => {
+        const cg = x.createLinearGradient(0, edge, 0, edge + dir * H * 0.16);
+        cg.addColorStop(0, spec.caps);
+        cg.addColorStop(1, 'rgba(255,255,255,0)');
+        x.fillStyle = cg;
+        x.fillRect(0, Math.min(edge, edge + dir * H * 0.16), W, H * 0.16);
+      });
+    }
+
+    const t = new THREE.CanvasTexture(c);
+    t.colorSpace = THREE.SRGBColorSpace;
+    t.wrapS = THREE.RepeatWrapping;
+    t.anisotropy = renderer.capabilities.getMaxAnisotropy();
+    return t;
+  }
+
+  function ringTexture(color) {
+    const W = 512, c = document.createElement('canvas');
+    c.width = W; c.height = 8;
+    const x = c.getContext('2d');
+    for (let i = 0; i < W; i++) {
+      const t = i / W;
+      // a few darker gaps, like real ring divisions
+      const gap = Math.abs(Math.sin(t * 9.1)) < 0.16 || Math.abs(t - 0.63) < 0.02;
+      x.globalAlpha = gap ? 0.05 : 0.30 + 0.45 * Math.abs(Math.sin(t * 23.0));
+      x.fillStyle = color;
+      x.fillRect(i, 0, 1, 8);
+    }
+    const t = new THREE.CanvasTexture(c);
+    t.colorSpace = THREE.SRGBColorSpace;
+    return t;
+  }
+
+  /* Surfaces are keyed to each project's own site palette. */
+  const WORLD_SPECS = {
+    // Streamlit app: white UI with coral accents -> pale, rusted, cratered
+    cup: {
+      base: ['#e9e2d6', '#d8c3ab', '#b9866a', '#8d5a44', '#c7ab94'],
+      mottleColors: ['rgba(238,98,70,0.55)', 'rgba(120,60,40,0.5)', 'rgba(255,236,214,0.4)'],
+      mottle: 26, craters: 30, rim: 'rgba(255,240,225,0.8)',
+      caps: 'rgba(255,253,250,0.92)', tilt: 0.22
+    },
+    // Wordle: near-black board with green and gold tiles -> dark basalt
+    wordle: {
+      base: ['#575c48', '#4a5140', '#333a2b', '#262b1f', '#3f4635'],
+      mottleColors: ['rgba(106,170,100,0.5)', 'rgba(201,180,88,0.42)', 'rgba(0,0,0,0.5)'],
+      mottle: 24, craters: 40, rim: 'rgba(214,228,184,0.75)', tilt: -0.16
+    },
+    // Drum kit: deep indigo with crimson -> volcanic, banded, one storm
+    drum: {
+      base: ['#4e4e7e', '#3f3f6a', '#322a4c', '#52303f', '#61465d'],
+      mottleColors: ['rgba(160,44,44,0.55)', 'rgba(255,150,90,0.3)', 'rgba(20,16,30,0.6)'],
+      mottle: 22, craters: 8, rim: 'rgba(255,180,150,0.5)',
+      bands: { count: 16, colors: ['rgba(126,42,42,0.5)', 'rgba(60,50,90,0.5)'] },
+      storm: { x: 0.34, y: 0.46, r: 120, hot: 'rgba(255,206,160,0.85)', cool: 'rgba(170,50,45,0.7)' },
+      tilt: 0.3
+    },
+    // Weather app: navy with bright blue -> ice giant, belts, a cyclone
+    weather: {
+      base: ['#7fb4e8', '#3f7fc6', '#1b4f96', '#123a72', '#5a92cf'],
+      mottleColors: ['rgba(220,240,255,0.45)', 'rgba(20,60,120,0.55)', 'rgba(120,190,255,0.4)'],
+      mottle: 26, craters: 0, rim: 'rgba(255,255,255,0.5)',
+      bands: { count: 26, colors: ['rgba(200,230,255,0.4)', 'rgba(16,48,104,0.5)'] },
+      storm: { x: 0.36, y: 0.42, r: 105, hot: 'rgba(245,252,255,0.95)', cool: 'rgba(110,180,255,0.6)' },
+      tilt: -0.24
+    },
+    // To-do list: pastel lavender/mint/sky -> smooth ice world
+    todo: {
+      base: ['#e2ddfa', '#c3c6ef', '#9aa6e0', '#7d76c4', '#b7c9ec'],
+      mottleColors: ['rgba(182,238,210,0.5)', 'rgba(255,255,255,0.5)', 'rgba(110,96,180,0.4)'],
+      mottle: 20, craters: 6, rim: 'rgba(255,255,255,0.7)',
+      bands: { count: 12, colors: ['rgba(255,255,255,0.3)', 'rgba(140,130,210,0.32)'] },
+      caps: 'rgba(255,255,255,0.85)', tilt: 0.34
+    },
+    // QR generator: black with dark maroon -> burnt basalt, lit fissures
+    qr: {
+      base: ['#6d4652', '#4e303b', '#36222c', '#281a22', '#5a3a47'],
+      mottleColors: ['rgba(200,60,50,0.5)', 'rgba(255,120,90,0.28)', 'rgba(0,0,0,0.6)'],
+      mottle: 24, craters: 26, rim: 'rgba(240,140,120,0.6)', tilt: -0.3
+    }
+  };
+
+  const worlds = [];
+
+  function buildWorlds() {
+    document.querySelectorAll('.planet-slot').forEach(slot => {
+      const key = (slot.dataset.world || '').replace('p-', '');
+      const spec = WORLD_SPECS[key];
+      if (!spec) return;
+
+      const group = new THREE.Group();
+      group.rotation.z = spec.tilt || 0;
+
+      const sphere = new THREE.Mesh(
+        new THREE.SphereGeometry(1, 72, 48),
+        new THREE.MeshStandardMaterial({ map: worldTexture(spec), roughness: 0.88, metalness: 0.04 })
+      );
+      group.add(sphere);
+
+      const card = slot.closest('.planet-card');
+      const ringColor = card && getComputedStyle(card).getPropertyValue('--ring').trim();
+      if (ringColor) {
+        const ring = new THREE.Mesh(
+          new THREE.RingGeometry(1.42, 2.15, 128, 1),
+          new THREE.MeshBasicMaterial({
+            map: ringTexture(ringColor), color: 0xffffff, side: THREE.DoubleSide,
+            transparent: true, opacity: 0.75, depthWrite: false
+          })
+        );
+        // map the strip across the ring's radius so the divisions read
+        const uv = ring.geometry.attributes.uv, pos = ring.geometry.attributes.position;
+        for (let i = 0; i < uv.count; i++) {
+          const r = Math.hypot(pos.getX(i), pos.getY(i));
+          uv.setXY(i, (r - 1.42) / 0.73, 0.5);
+        }
+        uv.needsUpdate = true;
+        ring.rotation.x = Math.PI / 2 - 0.34;
+        group.add(ring);
+      }
+
+      projScene.add(group);
+
+      const w = { slot, group, sphere, spin: 0.0016 + Math.random() * 0.0014, hover: 0, hoverT: 0 };
+      if (card) {
+        card.addEventListener('pointerenter', () => { w.hoverT = 1; });
+        card.addEventListener('pointerleave', () => { w.hoverT = 0; });
+        card.addEventListener('focusin', () => { w.hoverT = 1; });
+        card.addEventListener('focusout', () => { w.hoverT = 0; });
+      }
+      worlds.push(w);
+    });
+  }
+
+  let worldsVisible = false;
+
+  function syncWorlds() {
+    const vw = window.innerWidth, vh = window.innerHeight;
+    worldsVisible = false;
+    for (const w of worlds) {
+      const r = w.slot.getBoundingClientRect();
+      if (r.width === 0 || r.bottom < -240 || r.top > vh + 240) {
+        w.group.visible = false;
+        continue;
+      }
+      w.group.visible = true;
+      worldsVisible = true;
+
+      w.hover += (w.hoverT - w.hover) * 0.12;
+      const rad = (r.width / 2) * (1 + w.hover * 0.09);
+      // ortho space: origin at centre, +y up, one unit per CSS pixel
+      w.group.position.set(r.left + r.width / 2 - vw / 2, vh / 2 - (r.top + r.height / 2), 0);
+      w.group.scale.setScalar(rad);
+      w.sphere.rotation.y += w.spin;
+    }
+  }
+
+  /* --- meteors --- */
+  const meteors = [];
+  for (let i = 0; i < 4; i++) {
+    const geo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(), new THREE.Vector3(1, 0, 0)]);
+    const mat = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0 });
+    const line = new THREE.Line(geo, mat);
+    scene.add(line);
+    meteors.push({ line, mat, life: 0, wait: 60 + Math.random() * 500, vx: 0, vy: 0 });
+  }
+
+  function launchMeteor(m) {
+    const len = 90 + Math.random() * 130;
+    m.line.geometry.setFromPoints([new THREE.Vector3(0, 0, 0), new THREE.Vector3(-len, -len * 0.55, 0)]);
+    m.line.position.set((Math.random() - 0.5) * 900, 150 + Math.random() * 350, -300 - Math.random() * 700);
+    m.vx = -5 - Math.random() * 4;
+    m.vy = m.vx * 0.55;
+    m.life = 1;
+  }
+
+  const NEAR_TOP = new THREE.Color('#04060e'), NEAR_BOT = new THREE.Color('#101c3d');
+  const FAR_TOP  = new THREE.Color('#020309'), FAR_BOT  = new THREE.Color('#070a18');
+
+  let camX = 0, camY = 0, time = 0, visible = true;
+
+  /* ---------------------------------------------------------
+     Post-processing. This is what separates a three.js scene from a
+     finished image: lights that actually bloom, a fine grain over the
+     whole frame so gradients never band, a vignette and a cool grade.
+
+     It costs real GPU time, so it's off on small screens and whenever
+     the visitor has asked for reduced motion — the scene renders
+     straight to the canvas in that case.
+     --------------------------------------------------------- */
+  const usePost = !reduce && window.innerWidth >= 900;
+
+  const GradeShader = {
+    uniforms: {
+      tDiffuse: { value: null },
+      uTime:    { value: 0 },
+      uGrain:   { value: 0.032 },
+      uVignette:{ value: 0.9 }
+    },
+    vertexShader: `
+      varying vec2 vUv;
+      void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }
+    `,
+    fragmentShader: `
+      uniform sampler2D tDiffuse;
+      uniform float uTime; uniform float uGrain; uniform float uVignette;
+      varying vec2 vUv;
+
+      /* Hash-without-sine. The usual fract(sin(dot(...))) version loses
+         precision at screen-sized coordinates and lays down diagonal
+         streaks instead of noise, which is exactly what grain must not do. */
+      float hash(vec2 p) {
+        vec3 p3 = fract(vec3(p.xyx) * 0.1031);
+        p3 += dot(p3, p3.yzx + 33.33);
+        return fract((p3.x + p3.y) * p3.z);
+      }
+
+      void main() {
+        vec3 col = texture2D(tDiffuse, vUv).rgb;
+
+        // cool the shadows, keep the highlights neutral — a subtle grade
+        float l = dot(col, vec3(0.2126, 0.7152, 0.0722));
+        col = mix(col * vec3(0.94, 0.98, 1.10), col, smoothstep(0.0, 0.55, l));
+
+        // gentle S-curve for contrast
+        col = clamp((col - 0.5) * 1.06 + 0.5, 0.0, 1.0);
+
+        // vignette
+        vec2 d = vUv - 0.5;
+        col *= 1.0 - uVignette * 0.55 * dot(d, d);
+
+        // animated grain, scaled down in the highlights so it reads as film
+        // pixel-locked so grain size is constant regardless of resolution
+        float g = hash(gl_FragCoord.xy + fract(uTime) * 311.7) - 0.5;
+        col += g * uGrain * (1.0 - 0.6 * l);
+
+        gl_FragColor = vec4(col, 1.0);
+      }
+    `
+  };
+
+  let composer = null, gradePass = null, bloomPass = null;
+
+  if (usePost) {
+    composer = new EffectComposer(renderer);
+
+    const bgPass = new RenderPass(bgScene, bgCamera);
+    composer.addPass(bgPass);
+
+    // the main scene draws on top of the sky, keeping its colour buffer
+    const mainPass = new RenderPass(scene, camera);
+    mainPass.clear = false;
+    mainPass.clearDepth = true;
+    composer.addPass(mainPass);
+
+    // the project worlds sit in front of the starfield but behind the grade
+    const projPass = new RenderPass(projScene, projCamera);
+    projPass.clear = false;
+    projPass.clearDepth = true;
+    composer.addPass(projPass);
+
+    bloomPass = new UnrealBloomPass(
+      new THREE.Vector2(window.innerWidth, window.innerHeight),
+      0.62,   // strength — enough to glow, not enough to smear
+      0.62,   // radius
+      0.72    // threshold: only genuinely bright things bloom
+    );
+    composer.addPass(bloomPass);
+
+    gradePass = new ShaderPass(GradeShader);
+    composer.addPass(gradePass);
+    composer.addPass(new OutputPass());
+  }
+
+  function resize() {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    projCamera.left = -window.innerWidth / 2;
+    projCamera.right = window.innerWidth / 2;
+    projCamera.top = window.innerHeight / 2;
+    projCamera.bottom = -window.innerHeight / 2;
+    projCamera.updateProjectionMatrix();
+    if (composer) {
+      composer.setSize(window.innerWidth, window.innerHeight);
+      bloomPass.resolution.set(window.innerWidth, window.innerHeight);
+    }
+  }
+  window.addEventListener('resize', resize, { passive: true });
+  document.addEventListener('visibilitychange', () => { visible = !document.hidden; });
+
+  const sat = (v, a, b) => Math.min(1, Math.max(0, (v - a) / (b - a)));
+
+  window.__skyUpdate = function (state) {
+    if (!visible) return;
+    const p = state.progress;
+    const L = state.launchT;
+    const clutter = state.clutter === undefined ? 1 : state.clutter;
+    time += 0.016;
+
+    const far = sat(p, 0.05, 0.45);
+    skyUniforms.uTop.value.copy(NEAR_TOP).lerp(FAR_TOP, far);
+    skyUniforms.uBot.value.copy(NEAR_BOT).lerp(FAR_BOT, far);
+    skyUniforms.uGround.value = L < 0 ? 1 : Math.max(0, 1 - L * 2.6);
+
+    const flyZ = reduce ? 0 : -p * (FIELD_DEPTH * 0.6);
+
+    starMat.opacity = 0.35 + 0.65 * sat(L < 0 ? 0 : L, 0.1, 0.7);
+    dustMat.opacity = 0.5 * sat(p, 0.1, 0.4);
+    // travel with the camera, or we'd fly straight past it and leave it behind
+    dust.position.z = flyZ;
+
+    const neb = sat(p, 0.25, 0.6);
+    // halved since bloom went in — additive sprites pick up a lot of glow
+    // and at the old values they washed the whole section purple
+    nebulaMats.forEach((m, i) => { m.opacity = neb * (0.022 + i * 0.007) * clutter; });
+    nebulaGroup.children.forEach((s, i) => {
+      s.position.x += Math.sin(time * 0.12 + i) * s.userData.drift * 0.5;
+      s.position.y += Math.cos(time * 0.09 + i) * s.userData.drift * 0.3;
+    });
+
+    /* ---- Earth ---- */
+    const homeIn = (L < 0 ? 0 : sat(L, 0.35, 0.9)) * (1 - sat(p, 0.06, 0.34));
+    homeSurface.material.opacity = homeIn;
+    homeClouds.material.opacity = homeIn * 0.85;
+    home.visible = homeIn > 0.01;
+    home.rotation.y += 0.00035;
+    homeClouds.rotation.y += 0.00012;      // clouds drift relative to the ground
+    home.position.set(0, -1150 - p * 900, -700 + flyZ * 0.35);
+
+    const ma = time * 0.06;
+    moon.position.set(
+      home.position.x + Math.cos(ma) * 1500,
+      home.position.y + 700 + Math.sin(ma) * 220,
+      home.position.z + Math.sin(ma) * 900
+    );
+    moon.material.opacity = homeIn;
+    moon.visible = homeIn > 0.01;
+
+    /* ---- satellites ---- */
+    const satIn = (L < 0 ? 0 : sat(L, 0.5, 1)) * (1 - sat(p, 0.10, 0.24));
+    satellites.forEach((s, i) => {
+      const t = time * (0.05 + i * 0.02) + i * 2.2;
+      s.position.set(
+        Math.sin(t) * (360 + i * 170),
+        Math.cos(t * 0.8) * (170 + i * 80) + 60,
+        -620 - i * 300 + flyZ * 0.5
+      );
+      s.rotation.y = t * 0.6;
+      s.rotation.x = Math.sin(t * 0.4) * 0.3;
+      s.visible = satIn > 0.02;
+      s.traverse(o => { if (o.material) o.material.opacity = satIn; });
+    });
+
+    /* ---- outer planets ---- */
+    for (const pl of planets) {
+      const inView = sat(p, pl.appear, pl.appear + 0.12) * clutter;
+      pl.surface.material.opacity = inView * 0.5;
+      pl.wire.material.opacity = inView * 0.05;
+      if (pl.ringMesh) pl.ringMesh.material.opacity = inView * 0.22;
+      pl.group.position.z = flyZ - pl.dist;   // hold station ahead of the camera
+      pl.group.rotation.y += pl.spin;
+      pl.group.visible = inView > 0.01;
+    }
+
+    /* ---- the rocket ---- */
+    let thrust, stretch;
+    // x in world units would run off the side of a narrow phone, so place it
+    // as a fraction of what's actually visible at the rocket's depth
+    const halfW = Math.tan(THREE.MathUtils.degToRad(31)) * 290 * camera.aspect;
+
+    if (reduce) {
+      rocket.visible = false; thrust = 0; stretch = 1;
+    } else if (L < 0) {
+      // sitting on the pad through the countdown, offset to the side so it
+      // doesn't sit behind the countdown readout
+      rocket.position.set(halfW * 0.60, -80, -250);
+      rocket.rotation.z = 0;
+      rocket.visible = true;
+      thrust = 0.16; stretch = 0.9;
+    } else if (L < 1) {
+      rocket.position.set(halfW * 0.60, -80 + Math.pow(L, 1.8) * 900, -250);
+      rocket.rotation.z = -L * 0.22;
+      rocket.visible = true;
+      thrust = 1; stretch = 1 + L * 0.9;
+    } else {
+      rocket.visible = false; thrust = 0; stretch = 1;
+    }
+
+    const flick = 0.86 + Math.sin(time * 41) * 0.14;
+    for (const f of flameMats) {
+      f.mesh.scale.set(thrust * flick, thrust * stretch * flick, thrust * flick);
+      f.mat.opacity = thrust * f.base * flick;
+    }
+
+    if (rocket.visible && thrust > 0.3 && --puffTimer <= 0) {
+      puffTimer = 2;
+      emitPuff(rocket.position.x, rocket.position.y - 60, rocket.position.z);
+    }
+    for (const q of puffs) {
+      if (q.life <= 0) { q.mat.opacity = 0; continue; }
+      q.life -= 0.016;
+      q.sprite.position.y += q.vy;
+      q.sprite.position.x += q.vx;
+      const grow = q.size * (1 + (1 - q.life) * 1.6);
+      q.sprite.scale.set(grow, grow, 1);
+      // additive puffs stack fast; anything higher blooms to solid white
+      q.mat.opacity = Math.max(0, q.life * q.life * 0.20);
+    }
+
+    /* ---- camera ---- */
+    camX = camX + (state.mouseX * 42 - camX) * 0.045;
+    camY = camY + (-state.mouseY * 28 - camY) * 0.045;
+    const shake = (L >= 0 && L < 1) ? sat(L, 0, 0.06) * (1 - sat(L, 0.1, 0.4)) * 4.5 : 0;
+    const sx = shake ? (Math.random() - 0.5) * shake : 0;
+    const sy = shake ? (Math.random() - 0.5) * shake : 0;
+    camera.position.set(camX + sx, camY + sy, flyZ + 40);
+    camera.lookAt(camX * 0.3, camY * 0.3, flyZ - 400);
+
+    /* ---- meteors ---- */
+    if (p > 0.3 && !reduce) {
+      for (const m of meteors) {
+        if (m.life > 0) {
+          m.line.position.x += m.vx;
+          m.line.position.y += m.vy;
+          m.life -= 0.014;
+          m.mat.opacity = Math.max(0, Math.sin(m.life * Math.PI)) * 0.85;
+        } else if (--m.wait <= 0) {
+          m.wait = 200 + Math.random() * 900;
+          launchMeteor(m);
+        }
+      }
+    }
+
+    syncWorlds();
+
+    if (composer) {
+      gradePass.uniforms.uTime.value = time;
+      composer.render();
+    } else {
+      renderer.clear();
+      renderer.render(bgScene, bgCamera);
+      renderer.clearDepth();
+      renderer.render(scene, camera);
+      if (worldsVisible) {
+        renderer.clearDepth();
+        renderer.render(projScene, projCamera);
+      }
+    }
+  };
+
+  buildWorlds();
+  window.__skyUpdate({ progress: 0, launchT: -1, clutter: 1, mouseX: 0, mouseY: 0 });
+  window.dispatchEvent(new Event('sky-ready'));
+  </script>
+
+  <script>
+    // hand the scene to the main loop (module scripts run after classic ones)
+    window.addEventListener('sky-ready', () => { skyUpdate = window.__skyUpdate; });
+    setTimeout(() => {
+      if (!window.__skyUpdate) document.body.classList.add('no-webgl');
+    }, 6500);
+  </script>
+</body>
+</html>
